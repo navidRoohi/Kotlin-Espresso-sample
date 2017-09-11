@@ -26,7 +26,7 @@ class ApplicationTest {
         onView(withId(R.id.button_2)).perform(click())
         onView(withId(R.id.button_3)).perform(click())
         onView(withId(R.id.button_add)).perform(click())
-        onView(withId(R.id.button_3)).perform(click())
+        onView(withId(R.id.button_3))..perform(click())
         onView(withId(R.id.button_2)).perform(click())
         onView(withId(R.id.button_1)).perform(click())
         onView(withId(R.id.button_calc)).perform(click())
@@ -46,18 +46,6 @@ class ApplicationTest {
         onView(withId(R.id.field)).check(matches(withText("${999 - 333}")))
     }
 
-    @Test
-    fun testMulti() {
-        onView(withId(R.id.button_1)).perform(click())
-        onView(withId(R.id.button_0)).perform(click())
-        onView(withId(R.id.button_0)).perform(click())
-        onView(withId(R.id.button_multi)).perform(click())
-        onView(withId(R.id.button_2)).perform(click())
-        onView(withId(R.id.button_0)).perform(click())
-        onView(withId(R.id.button_0)).perform(click())
-        onView(withId(R.id.button_calc)).perform(click())
-        onView(withId(R.id.field)).check(matches(withText("${100 * 200}")))
-    }
 
     @Test
     fun testDiv() {
@@ -70,5 +58,17 @@ class ApplicationTest {
         onView(withId(R.id.button_0)).perform(click())
         onView(withId(R.id.button_calc)).perform(click())
         onView(withId(R.id.field)).check(matches(withText("${333 / 100.0}")))
+    }
+    @Test
+    fun testMulti() {
+        onView(withId(R.id.button_1)).perform(click())
+        onView(withId(R.id.button_0)).perform(click())
+        onView(withId(R.id.button_0)).perform(click())
+        onView(withId(R.id.button_multi)).perform(click())
+        onView(withId(R.id.button_2)).perform(click())
+        onView(withId(R.id.button_0)).perform(click())
+        onView(withId(R.id.button_0)).perform(click())
+        onView(withId(R.id.button_calc)).perform(click())
+        onView(withId(R.id.field)).check(matches(withText("${100 * 200}")))
     }
 }

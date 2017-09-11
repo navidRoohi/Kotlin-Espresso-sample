@@ -59,6 +59,7 @@ class ApplicationTest {
         onView(withId(R.id.button_calc)).perform(click())
         onView(withId(R.id.field)).check(matches(withText("${333 / 100.0}")))
     }
+    // TODO : this test failed, as ',' was not consider as part of the test (20000) vs  (20,000)
     @Test
     fun testMulti() {
         onView(withId(R.id.button_1)).perform(click())

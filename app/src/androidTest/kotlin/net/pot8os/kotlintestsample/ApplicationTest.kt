@@ -26,7 +26,7 @@ class ApplicationTest {
         onView(withId(R.id.button_2)).perform(click())
         onView(withId(R.id.button_3)).perform(click())
         onView(withId(R.id.button_add)).perform(click())
-        onView(withId(R.id.button_3))..perform(click())
+        onView(withId(R.id.button_3)).perform(click())
         onView(withId(R.id.button_2)).perform(click())
         onView(withId(R.id.button_1)).perform(click())
         onView(withId(R.id.button_calc)).perform(click())

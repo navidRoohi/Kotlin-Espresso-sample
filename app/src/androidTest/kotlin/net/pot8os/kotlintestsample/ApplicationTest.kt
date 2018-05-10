@@ -11,6 +11,10 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
+import android.support.test.runner.AndroidJUnit4;
+import com.microsoft.appcenter.espresso.Factory;
+import com.microsoft.appcenter.espresso.ReportHelper;
+
 /**
  * @author So Nakamura, 2015/12/19
  */
@@ -19,6 +23,9 @@ class ApplicationTest {
 
     @Rule @JvmField
     val activity = ActivityTestRule<MainActivity>(MainActivity::class.java)
+    
+    @Rule
+    val reportHelper = Factory.getReportHelper()
 
     @Test
     fun testAdd() {
